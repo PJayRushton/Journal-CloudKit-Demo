@@ -68,6 +68,7 @@
 		A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchFromCloudKit.swift; sourceTree = "<group>"; };
 		A1F88D492179342400878D9E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Journal-CloudKit.entitlements"; sourceTree = "<group>"; };
+		A1F88D4D2179346800878D9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F88D4E2179346800878D9E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,7 @@
 			children = (
 				A1F88D0821792F0C00878D9E /* Journal-CloudKit */,
 				A1F88D0721792F0C00878D9E /* Products */,
+				A1F88D4C2179346800878D9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +103,7 @@
 		A1F88D0821792F0C00878D9E /* Journal-CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */,
 				A1F88D0921792F0C00878D9E /* AppDelegate.swift */,
 				A1F88D0F21792F0C00878D9E /* Main.storyboard */,
 				A1F88D47217933A400878D9E /* Model */,
@@ -164,6 +168,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		A1F88D4C2179346800878D9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F88D4D2179346800878D9E /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +208,14 @@
 				TargetAttributes = {
 					A1F88D0521792F0C00878D9E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -404,9 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Journal-CloudKit/Journal-CloudKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WK6LDT652Z;
-				INFOPLIST_FILE = "Journal-CloudKit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-CloudKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,9 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Journal-CloudKit/Journal-CloudKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WK6LDT652Z;
-				INFOPLIST_FILE = "Journal-CloudKit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-CloudKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
