@@ -33,6 +33,8 @@
 		A1F88D442179338B00878D9E /* SubscribeToDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D312179338B00878D9E /* SubscribeToDatabase.swift */; };
 		A1F88D452179338B00878D9E /* UpdateCloudKitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */; };
 		A1F88D462179338B00878D9E /* FetchFromCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */; };
+		A1F88D4A2179342400878D9E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D492179342400878D9E /* Book.swift */; };
+		A1F88D4E2179346800878D9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F88D4D2179346800878D9E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		A1F88D312179338B00878D9E /* SubscribeToDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeToDatabase.swift; sourceTree = "<group>"; };
 		A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCloudKitBadge.swift; sourceTree = "<group>"; };
 		A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchFromCloudKit.swift; sourceTree = "<group>"; };
+		A1F88D492179342400878D9E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Journal-CloudKit.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				A1F88D0921792F0C00878D9E /* AppDelegate.swift */,
-				A1F88D0B21792F0C00878D9E /* MasterViewController.swift */,
-				A1F88D0D21792F0C00878D9E /* DetailViewController.swift */,
 				A1F88D0F21792F0C00878D9E /* Main.storyboard */,
+				A1F88D47217933A400878D9E /* Model */,
+				A1F88D48217933BA00878D9E /* UI */,
 				A1F88D1F21792F8800878D9E /* Resources */,
 			);
 			path = "Journal-CloudKit";
@@ -141,6 +145,23 @@
 				A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */,
 			);
 			path = "CloudKit-Reactor";
+			sourceTree = "<group>";
+		};
+		A1F88D47217933A400878D9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1F88D492179342400878D9E /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1F88D48217933BA00878D9E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A1F88D0B21792F0C00878D9E /* MasterViewController.swift */,
+				A1F88D0D21792F0C00878D9E /* DetailViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +243,7 @@
 				A1F88D442179338B00878D9E /* SubscribeToDatabase.swift in Sources */,
 				A1F88D362179338B00878D9E /* CreateCustomZone.swift in Sources */,
 				A1F88D412179338B00878D9E /* FetchRecordZoneChanges.swift in Sources */,
+				A1F88D4A2179342400878D9E /* Book.swift in Sources */,
 				A1F88D0E21792F0C00878D9E /* DetailViewController.swift in Sources */,
 				A1F88D0C21792F0C00878D9E /* MasterViewController.swift in Sources */,
 				A1F88D3F2179338B00878D9E /* DiscoverCurrentUserIdentity.swift in Sources */,
