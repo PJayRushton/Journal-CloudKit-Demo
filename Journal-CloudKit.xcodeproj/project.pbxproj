@@ -13,28 +13,9 @@
 		A1F88D1121792F0C00878D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D0F21792F0C00878D9E /* Main.storyboard */; };
 		A1F88D1321792F0E00878D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D1221792F0E00878D9E /* Assets.xcassets */; };
 		A1F88D1621792F0E00878D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */; };
-		A1F88D1E21792F8000878D9E /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D1D21792F8000878D9E /* Reactor.swift */; };
-		A1F88D342179338B00878D9E /* SaveToCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D212179338B00878D9E /* SaveToCloudKit.swift */; };
-		A1F88D352179338B00878D9E /* AcceptShares.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D222179338B00878D9E /* AcceptShares.swift */; };
-		A1F88D362179338B00878D9E /* CreateCustomZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D232179338B00878D9E /* CreateCustomZone.swift */; };
-		A1F88D372179338B00878D9E /* FetchCloudKitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D242179338B00878D9E /* FetchCloudKitRecord.swift */; };
-		A1F88D382179338B00878D9E /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D252179338B00878D9E /* CloudKitSyncable.swift */; };
-		A1F88D392179338B00878D9E /* CheckCloudKitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D262179338B00878D9E /* CheckCloudKitStatus.swift */; };
-		A1F88D3A2179338B00878D9E /* FetchRecordZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D272179338B00878D9E /* FetchRecordZone.swift */; };
-		A1F88D3B2179338B00878D9E /* FetchCurrentUserID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D282179338B00878D9E /* FetchCurrentUserID.swift */; };
-		A1F88D3C2179338B00878D9E /* DeleteFromCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D292179338B00878D9E /* DeleteFromCloudKit.swift */; };
-		A1F88D3D2179338B00878D9E /* SaveCloudKitRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2A2179338B00878D9E /* SaveCloudKitRecords.swift */; };
-		A1F88D3E2179338B00878D9E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2B2179338B00878D9E /* Events.swift */; };
-		A1F88D3F2179338B00878D9E /* DiscoverCurrentUserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2C2179338B00878D9E /* DiscoverCurrentUserIdentity.swift */; };
-		A1F88D402179338B00878D9E /* FetchChangesFromCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2D2179338B00878D9E /* FetchChangesFromCloudKit.swift */; };
-		A1F88D412179338B00878D9E /* FetchRecordZoneChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2E2179338B00878D9E /* FetchRecordZoneChanges.swift */; };
-		A1F88D422179338B00878D9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D2F2179338B00878D9E /* Constants.swift */; };
-		A1F88D432179338B00878D9E /* SubscribeToCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D302179338B00878D9E /* SubscribeToCloudKit.swift */; };
-		A1F88D442179338B00878D9E /* SubscribeToDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D312179338B00878D9E /* SubscribeToDatabase.swift */; };
-		A1F88D452179338B00878D9E /* UpdateCloudKitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */; };
-		A1F88D462179338B00878D9E /* FetchFromCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */; };
 		A1F88D4A2179342400878D9E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D492179342400878D9E /* Book.swift */; };
 		A1F88D4E2179346800878D9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F88D4D2179346800878D9E /* CloudKit.framework */; };
+		A1F88D502179352E00878D9E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D4F2179352E00878D9E /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,29 +27,10 @@
 		A1F88D1221792F0E00878D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F88D1521792F0E00878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1F88D1721792F0E00878D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1F88D1D21792F8000878D9E /* Reactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
-		A1F88D212179338B00878D9E /* SaveToCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveToCloudKit.swift; sourceTree = "<group>"; };
-		A1F88D222179338B00878D9E /* AcceptShares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptShares.swift; sourceTree = "<group>"; };
-		A1F88D232179338B00878D9E /* CreateCustomZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCustomZone.swift; sourceTree = "<group>"; };
-		A1F88D242179338B00878D9E /* FetchCloudKitRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCloudKitRecord.swift; sourceTree = "<group>"; };
-		A1F88D252179338B00878D9E /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
-		A1F88D262179338B00878D9E /* CheckCloudKitStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCloudKitStatus.swift; sourceTree = "<group>"; };
-		A1F88D272179338B00878D9E /* FetchRecordZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRecordZone.swift; sourceTree = "<group>"; };
-		A1F88D282179338B00878D9E /* FetchCurrentUserID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCurrentUserID.swift; sourceTree = "<group>"; };
-		A1F88D292179338B00878D9E /* DeleteFromCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteFromCloudKit.swift; sourceTree = "<group>"; };
-		A1F88D2A2179338B00878D9E /* SaveCloudKitRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveCloudKitRecords.swift; sourceTree = "<group>"; };
-		A1F88D2B2179338B00878D9E /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		A1F88D2C2179338B00878D9E /* DiscoverCurrentUserIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCurrentUserIdentity.swift; sourceTree = "<group>"; };
-		A1F88D2D2179338B00878D9E /* FetchChangesFromCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchChangesFromCloudKit.swift; sourceTree = "<group>"; };
-		A1F88D2E2179338B00878D9E /* FetchRecordZoneChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRecordZoneChanges.swift; sourceTree = "<group>"; };
-		A1F88D2F2179338B00878D9E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A1F88D302179338B00878D9E /* SubscribeToCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeToCloudKit.swift; sourceTree = "<group>"; };
-		A1F88D312179338B00878D9E /* SubscribeToDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeToDatabase.swift; sourceTree = "<group>"; };
-		A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCloudKitBadge.swift; sourceTree = "<group>"; };
-		A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchFromCloudKit.swift; sourceTree = "<group>"; };
 		A1F88D492179342400878D9E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Journal-CloudKit.entitlements"; sourceTree = "<group>"; };
 		A1F88D4D2179346800878D9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		A1F88D4F2179352E00878D9E /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,45 +78,18 @@
 		A1F88D1F21792F8800878D9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1F88D202179337E00878D9E /* CloudKit-Reactor */,
 				A1F88D1221792F0E00878D9E /* Assets.xcassets */,
 				A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */,
-				A1F88D1D21792F8000878D9E /* Reactor.swift */,
 				A1F88D1721792F0E00878D9E /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A1F88D202179337E00878D9E /* CloudKit-Reactor */ = {
-			isa = PBXGroup;
-			children = (
-				A1F88D222179338B00878D9E /* AcceptShares.swift */,
-				A1F88D262179338B00878D9E /* CheckCloudKitStatus.swift */,
-				A1F88D252179338B00878D9E /* CloudKitSyncable.swift */,
-				A1F88D2F2179338B00878D9E /* Constants.swift */,
-				A1F88D232179338B00878D9E /* CreateCustomZone.swift */,
-				A1F88D292179338B00878D9E /* DeleteFromCloudKit.swift */,
-				A1F88D2C2179338B00878D9E /* DiscoverCurrentUserIdentity.swift */,
-				A1F88D2B2179338B00878D9E /* Events.swift */,
-				A1F88D2D2179338B00878D9E /* FetchChangesFromCloudKit.swift */,
-				A1F88D242179338B00878D9E /* FetchCloudKitRecord.swift */,
-				A1F88D282179338B00878D9E /* FetchCurrentUserID.swift */,
-				A1F88D332179338B00878D9E /* FetchFromCloudKit.swift */,
-				A1F88D272179338B00878D9E /* FetchRecordZone.swift */,
-				A1F88D2E2179338B00878D9E /* FetchRecordZoneChanges.swift */,
-				A1F88D2A2179338B00878D9E /* SaveCloudKitRecords.swift */,
-				A1F88D212179338B00878D9E /* SaveToCloudKit.swift */,
-				A1F88D302179338B00878D9E /* SubscribeToCloudKit.swift */,
-				A1F88D312179338B00878D9E /* SubscribeToDatabase.swift */,
-				A1F88D322179338B00878D9E /* UpdateCloudKitBadge.swift */,
-			);
-			path = "CloudKit-Reactor";
 			sourceTree = "<group>";
 		};
 		A1F88D47217933A400878D9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A1F88D492179342400878D9E /* Book.swift */,
+				A1F88D4F2179352E00878D9E /* Page.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,30 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F88D432179338B00878D9E /* SubscribeToCloudKit.swift in Sources */,
-				A1F88D1E21792F8000878D9E /* Reactor.swift in Sources */,
-				A1F88D422179338B00878D9E /* Constants.swift in Sources */,
-				A1F88D3C2179338B00878D9E /* DeleteFromCloudKit.swift in Sources */,
-				A1F88D462179338B00878D9E /* FetchFromCloudKit.swift in Sources */,
-				A1F88D442179338B00878D9E /* SubscribeToDatabase.swift in Sources */,
-				A1F88D362179338B00878D9E /* CreateCustomZone.swift in Sources */,
-				A1F88D412179338B00878D9E /* FetchRecordZoneChanges.swift in Sources */,
 				A1F88D4A2179342400878D9E /* Book.swift in Sources */,
 				A1F88D0E21792F0C00878D9E /* DetailViewController.swift in Sources */,
 				A1F88D0C21792F0C00878D9E /* MasterViewController.swift in Sources */,
-				A1F88D3F2179338B00878D9E /* DiscoverCurrentUserIdentity.swift in Sources */,
-				A1F88D372179338B00878D9E /* FetchCloudKitRecord.swift in Sources */,
-				A1F88D392179338B00878D9E /* CheckCloudKitStatus.swift in Sources */,
-				A1F88D402179338B00878D9E /* FetchChangesFromCloudKit.swift in Sources */,
+				A1F88D502179352E00878D9E /* Page.swift in Sources */,
 				A1F88D0A21792F0C00878D9E /* AppDelegate.swift in Sources */,
-				A1F88D3D2179338B00878D9E /* SaveCloudKitRecords.swift in Sources */,
-				A1F88D3E2179338B00878D9E /* Events.swift in Sources */,
-				A1F88D342179338B00878D9E /* SaveToCloudKit.swift in Sources */,
-				A1F88D452179338B00878D9E /* UpdateCloudKitBadge.swift in Sources */,
-				A1F88D3B2179338B00878D9E /* FetchCurrentUserID.swift in Sources */,
-				A1F88D3A2179338B00878D9E /* FetchRecordZone.swift in Sources */,
-				A1F88D382179338B00878D9E /* CloudKitSyncable.swift in Sources */,
-				A1F88D352179338B00878D9E /* AcceptShares.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
