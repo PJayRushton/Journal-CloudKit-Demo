@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct Book: Codable, Hashable {
+    
+    var id: Identifier<Book>
+    var title: String
+    var createdAt: Date
+    
+    init(id: Identifier<Book> = Identifier(UUID().uuidString), title: String) {
+        self.id = id
+        self.title = title
+        self.createdAt = Date()
+    }
+    
+}

@@ -8,22 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		A1F88D0A21792F0C00878D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0921792F0C00878D9E /* AppDelegate.swift */; };
-		A1F88D0C21792F0C00878D9E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0B21792F0C00878D9E /* MasterViewController.swift */; };
-		A1F88D0E21792F0C00878D9E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0D21792F0C00878D9E /* DetailViewController.swift */; };
-		A1F88D1121792F0C00878D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D0F21792F0C00878D9E /* Main.storyboard */; };
+		A1F88D0C21792F0C00878D9E /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0B21792F0C00878D9E /* BookListViewController.swift */; };
+		A1F88D0E21792F0C00878D9E /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0D21792F0C00878D9E /* PageDetailViewController.swift */; };
 		A1F88D1321792F0E00878D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D1221792F0E00878D9E /* Assets.xcassets */; };
 		A1F88D1621792F0E00878D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */; };
 		A1F88D4A2179342400878D9E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D492179342400878D9E /* Book.swift */; };
 		A1F88D4E2179346800878D9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F88D4D2179346800878D9E /* CloudKit.framework */; };
 		A1F88D502179352E00878D9E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D4F2179352E00878D9E /* Page.swift */; };
+		A1F88D5321793D1300878D9E /* PageDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D5121793D1300878D9E /* PageDetailViewController.storyboard */; };
+		A1F88D5621793D3900878D9E /* BookListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D5421793D3900878D9E /* BookListViewController.storyboard */; };
+		A1F88D5921793D4A00878D9E /* PageListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F88D5721793D4A00878D9E /* PageListViewController.storyboard */; };
+		A1F88D5B21793D5600878D9E /* PageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D5A21793D5600878D9E /* PageListViewController.swift */; };
+		A1F88D5E21793FE700878D9E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D5D21793FE700878D9E /* AppState.swift */; };
+		A1F88D602179401200878D9E /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D5F2179401200878D9E /* Reactor.swift */; };
+		A1F88D642179411C00878D9E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D632179411C00878D9E /* Identifier.swift */; };
+		A1F88D66217945B200878D9E /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D65217945B200878D9E /* Commands.swift */; };
+		A1F88D6821794BFF00878D9E /* AppEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D6721794BFF00878D9E /* AppEvents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1F88D0621792F0C00878D9E /* Journal-CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F88D0921792F0C00878D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1F88D0B21792F0C00878D9E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A1F88D0D21792F0C00878D9E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A1F88D1021792F0C00878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1F88D0B21792F0C00878D9E /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		A1F88D0D21792F0C00878D9E /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		A1F88D1221792F0E00878D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F88D1521792F0E00878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1F88D1721792F0E00878D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +38,15 @@
 		A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Journal-CloudKit.entitlements"; sourceTree = "<group>"; };
 		A1F88D4D2179346800878D9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A1F88D4F2179352E00878D9E /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		A1F88D5221793D1300878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Journal-CloudKit/Base.lproj/PageDetailViewController.storyboard"; sourceTree = SOURCE_ROOT; };
+		A1F88D5521793D3900878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Journal-CloudKit/Base.lproj/BookListViewController.storyboard"; sourceTree = SOURCE_ROOT; };
+		A1F88D5821793D4A00878D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Journal-CloudKit/Base.lproj/PageListViewController.storyboard"; sourceTree = SOURCE_ROOT; };
+		A1F88D5A21793D5600878D9E /* PageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListViewController.swift; sourceTree = "<group>"; };
+		A1F88D5D21793FE700878D9E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A1F88D5F2179401200878D9E /* Reactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
+		A1F88D632179411C00878D9E /* Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = ../../../../Downloads/Identifier.swift; sourceTree = "<group>"; };
+		A1F88D65217945B200878D9E /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		A1F88D6721794BFF00878D9E /* AppEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEvents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +83,7 @@
 			children = (
 				A1F88D4B2179346600878D9E /* Journal-CloudKit.entitlements */,
 				A1F88D0921792F0C00878D9E /* AppDelegate.swift */,
-				A1F88D0F21792F0C00878D9E /* Main.storyboard */,
+				A1F88D5C21793F9300878D9E /* Infrastructure */,
 				A1F88D47217933A400878D9E /* Model */,
 				A1F88D48217933BA00878D9E /* UI */,
 				A1F88D1F21792F8800878D9E /* Resources */,
@@ -78,8 +94,10 @@
 		A1F88D1F21792F8800878D9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1F88D5F2179401200878D9E /* Reactor.swift */,
 				A1F88D1221792F0E00878D9E /* Assets.xcassets */,
 				A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */,
+				A1F88D632179411C00878D9E /* Identifier.swift */,
 				A1F88D1721792F0E00878D9E /* Info.plist */,
 			);
 			path = Resources;
@@ -97,8 +115,12 @@
 		A1F88D48217933BA00878D9E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A1F88D0B21792F0C00878D9E /* MasterViewController.swift */,
-				A1F88D0D21792F0C00878D9E /* DetailViewController.swift */,
+				A1F88D0B21792F0C00878D9E /* BookListViewController.swift */,
+				A1F88D5421793D3900878D9E /* BookListViewController.storyboard */,
+				A1F88D5A21793D5600878D9E /* PageListViewController.swift */,
+				A1F88D5721793D4A00878D9E /* PageListViewController.storyboard */,
+				A1F88D0D21792F0C00878D9E /* PageDetailViewController.swift */,
+				A1F88D5121793D1300878D9E /* PageDetailViewController.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -109,6 +131,16 @@
 				A1F88D4D2179346800878D9E /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1F88D5C21793F9300878D9E /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A1F88D5D21793FE700878D9E /* AppState.swift */,
+				A1F88D65217945B200878D9E /* Commands.swift */,
+				A1F88D6721794BFF00878D9E /* AppEvents.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F88D1621792F0E00878D9E /* LaunchScreen.storyboard in Resources */,
+				A1F88D5321793D1300878D9E /* PageDetailViewController.storyboard in Resources */,
 				A1F88D1321792F0E00878D9E /* Assets.xcassets in Resources */,
-				A1F88D1121792F0C00878D9E /* Main.storyboard in Resources */,
+				A1F88D5621793D3900878D9E /* BookListViewController.storyboard in Resources */,
+				A1F88D5921793D4A00878D9E /* PageListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +224,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F88D602179401200878D9E /* Reactor.swift in Sources */,
 				A1F88D4A2179342400878D9E /* Book.swift in Sources */,
-				A1F88D0E21792F0C00878D9E /* DetailViewController.swift in Sources */,
-				A1F88D0C21792F0C00878D9E /* MasterViewController.swift in Sources */,
+				A1F88D0E21792F0C00878D9E /* PageDetailViewController.swift in Sources */,
+				A1F88D66217945B200878D9E /* Commands.swift in Sources */,
+				A1F88D5E21793FE700878D9E /* AppState.swift in Sources */,
+				A1F88D0C21792F0C00878D9E /* BookListViewController.swift in Sources */,
+				A1F88D642179411C00878D9E /* Identifier.swift in Sources */,
+				A1F88D5B21793D5600878D9E /* PageListViewController.swift in Sources */,
+				A1F88D6821794BFF00878D9E /* AppEvents.swift in Sources */,
 				A1F88D502179352E00878D9E /* Page.swift in Sources */,
 				A1F88D0A21792F0C00878D9E /* AppDelegate.swift in Sources */,
 			);
@@ -201,20 +241,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A1F88D0F21792F0C00878D9E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1F88D1021792F0C00878D9E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1F88D1521792F0E00878D9E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A1F88D5121793D1300878D9E /* PageDetailViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F88D5221793D1300878D9E /* Base */,
+			);
+			name = PageDetailViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		A1F88D5421793D3900878D9E /* BookListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F88D5521793D3900878D9E /* Base */,
+			);
+			name = BookListViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		A1F88D5721793D4A00878D9E /* PageListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1F88D5821793D4A00878D9E /* Base */,
+			);
+			name = PageListViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
