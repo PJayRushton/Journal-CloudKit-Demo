@@ -83,12 +83,23 @@ private extension BookListViewController {
 }
 
 
+// MARK: - Navigation
+
+extension BookListViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
+    
+}
+
+
 // MARK: - Table View
 
 extension BookListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let selectedBook = book(at: indexPath)
+        core.fire(event: Selected<Book>(selectedBook))
     }
     
 }

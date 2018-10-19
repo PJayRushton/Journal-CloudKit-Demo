@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  PageDetailViewController.swift
 //  Journal-CloudKit
 //
 //  Created by Parker Rushton on 10/18/18.
@@ -8,33 +8,53 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class PageDetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
 
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-    }
-
+    fileprivate var isNew = false
+    fileprivate var page: Page?
+    fileprivate let core = App.sharedCore
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        textView.text = core.state.currentPage?.text
     }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        core.add(subscriber: self)
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        core.fire(command: SavePage())
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        core.remove(subscriber: self)
+    }
 
 }
 
+
+// MARK: - Subscriber
+
+extension PageDetailViewController: Subscriber {
+    
+    func update(with state: AppState) {
+        page = state.currentPage
+        isNew = state.newPage != nil
+    }
+    
+}
+
+
+extension PageDetailViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        core.fire(command: UpdatePageText(text: textView.text))
+    }
+    
+}

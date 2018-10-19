@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Book: Codable, Hashable {
+struct Book: Codable, Hashable, Equatable {
     
     var id: Identifier<Book>
     var title: String

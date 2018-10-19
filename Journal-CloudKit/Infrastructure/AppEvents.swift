@@ -16,3 +16,50 @@ struct ObjectAdded<T>: Event {
     }
     
 }
+
+struct ObjectUpdated<T>: Event {
+    var object: T
+    
+    init(_ object: T) {
+        self.object = object
+    }
+
+}
+
+struct ObjectDeleted<T>: Event {
+    var object: T
+    
+    init(_ object: T) {
+        self.object = object
+    }
+    
+}
+
+struct Selected<T>: Event {
+    var object: T?
+    
+    init(_ object: T?) {
+        self.object = object
+    }
+    
+}
+
+struct CreationStarted<T>: Event {
+    var object: T
+    
+    init(_ object: T) {
+        self.object = object
+    }
+    
+}
+
+struct CreationFinished<T>: Event {
+    var object: T
+    
+    init(_ object: T) {
+        self.object = object
+    }
+    
+}
+
+struct CreationCancelled<T>: Event { }

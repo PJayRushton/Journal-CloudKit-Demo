@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jtB-Fb-8FB" kind="show" identifier="showBookPages" id="ff9-5a-soi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,6 +61,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D3-XB-oHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="80.50974512743629"/>
+        </scene>
+        <!--PageListViewController-->
+        <scene sceneID="WCA-Od-ou4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PageListViewController" id="jtB-Fb-8FB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBX-iH-Xbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rrk-aj-XZK">

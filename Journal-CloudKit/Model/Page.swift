@@ -8,11 +8,24 @@
 
 import Foundation
 
-struct Page: Codable, Hashable {
+struct Page: Identifiable {
     
-    var id: Identifier<Page>
-    var title: String
+    var identifier: Identifier<Page>
+    var bookId: Identifier<Book>
     var createdAt: Date
+    var modifiedAt: Date
     var text: String
+    
+    var title: String? {
+        return text.components(separatedBy: "\n").first
+    }
+    
+    init(id: Identifier<Page> = Identifier(UUID().uuidString), bookId: Identifier<Book>, text: String = "") {
+        self.identifier = id
+        self.createdAt = Date()
+        self.bookId = bookId
+        self.text = text
+        self.modifiedAt = Date()
+    }
     
 }
