@@ -120,7 +120,7 @@ extension BookListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookListCell", for: indexPath)
         let book = self.book(at: indexPath)
         cell.textLabel?.text = book.title
-        cell.detailTextLabel?.text = String(describing: book.createdAt)
+        cell.detailTextLabel?.text = book.createdAt.mediumString
         return cell
     }
 

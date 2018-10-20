@@ -12,49 +12,48 @@ class PageDetailViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
 
-    fileprivate var isNew = false
-    fileprivate var page: Page?
+    fileprivate var isNew: Bool {
+        return core.state.newPage != nil
+    }
+    fileprivate var updatedPage: Page?
     fileprivate let core = App.sharedCore
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = core.state.currentPage?.text
+        updatedPage = core.state.currentPage
+        textView.text = updatedPage?.text
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        core.add(subscriber: self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        core.fire(command: SavePage())
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        core.remove(subscriber: self)
+    @IBAction func save() {
+        core.fire(command: SavePage(updatedPage, completion: { error in
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                self.showSaveErrorAlert()
+            }
+        }))
     }
 
-}
-
-
-// MARK: - Subscriber
-
-extension PageDetailViewController: Subscriber {
-    
-    func update(with state: AppState) {
-        page = state.currentPage
-        isNew = state.newPage != nil
-    }
-    
 }
 
 
 extension PageDetailViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
-        core.fire(command: UpdatePageText(text: textView.text))
+        updatedPage?.text = textView.text
     }
     
+}
+
+
+private extension PageDetailViewController {
+    
+    func showSaveErrorAlert() {
+        let alert = UIAlertController(title: "Hmm...", message: "Something went wrong", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "🤷🏻‍♂️", style: .cancel))
+        present(alert, animated: true)
+    }
+
 }

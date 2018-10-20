@@ -68,7 +68,8 @@ struct CreateNewBook: Command {
 
     func execute(state: AppState, core: Core<AppState>) {
         let newBook = Book(title: title)
-        cloudManager.saveRecord(newBook.recordWithChanges) { error in
+        guard let recordToSave = newBook.recordToSave else { return }
+        cloudManager.saveRecord(recordToSave) { error in
             guard error == nil else { return }
             core.fire(event: ObjectAdded<Book>(newBook))
         }
@@ -105,23 +106,40 @@ struct UpdatePageText: Command {
 
 struct SavePage: Command {
     
+    let page: Page?
     private let cloudManager = CloudKitManager()
-
+    fileprivate var completion: ((Error?) -> Void)?
+    
+    init(_ page: Page?, completion: ((Error?) -> Void)? = nil) {
+        self.page = page
+        self.completion = completion
+    }
+    
     func execute(state: AppState, core: Core<AppState>) {
-        if let newPage = state.newPage {
-            if newPage.text.isEmpty {
+        guard var page = page, let recordToSave = page.recordToSave else { return }
+        page.modifiedAt = Date()
+        if !page.isSavedInCloudKit {
+            if page.text.isEmpty {
                 core.fire(event: CreationCancelled<Page>())
             } else {
-                cloudManager.saveRecord(newPage.recordWithChanges) { error in
+                cloudManager.saveRecord(recordToSave) { error in
                     if let error = error {
                         dump(error)
                     } else {
-                        core.fire(event: CreationFinished<Page>(newPage))
+                        core.fire(event: CreationFinished<Page>(page))
                     }
+                    self.completion?(error)
                 }
             }
         } else {
-            // TODO: - save
+            cloudManager.saveRecord(recordToSave) { error in
+                if let error = error {
+                    dump(error)
+                } else {
+                    core.fire(event: ObjectUpdated<Page>(page))
+                }
+                self.completion?(error)
+            }
         }
     }
     

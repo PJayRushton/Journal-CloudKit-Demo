@@ -10,18 +10,38 @@ import Foundation
 import CloudKit
 
 protocol RecordCreating {
-    init(record: CKRecord) throws
     static var recordType: String { get }
+    init(record: CKRecord) throws
     var cloudKitRecordID: CKRecord.ID { get }
     var cloudKitRecordProperties: [String: CKRecordValue?] { get }
-    var recordWithChanges: CKRecord { get }
+    var isSavedInCloudKit: Bool { get }
+    var recordWithChanges: CKRecord? { get }
+    var recordToSave: CKRecord? { get }
+    var encodedSystemFields: Data? { get }
 }
 
 extension RecordCreating {
     
-    var recordWithChanges: CKRecord {
-        return CKRecord(object: self)
+    var isSavedInCloudKit: Bool {
+        return encodedSystemFields != nil
     }
+    var recordToSave: CKRecord? {
+        return isSavedInCloudKit ? recordWithChanges : CKRecord(object: self)
+    }
+    
+    var recordWithChanges: CKRecord? {
+        guard let encodedSystemFields = encodedSystemFields else { return nil }
+        let coder = try! NSKeyedUnarchiver(forReadingFrom: encodedSystemFields)
+        coder.requiresSecureCoding = true
+        let record = CKRecord(coder: coder)
+        coder.finishDecoding()
+        for (key, value) in cloudKitRecordProperties {
+            record?[key] = value
+        }
+        return record
+    }
+    
+
     
 }
 
@@ -44,4 +64,10 @@ extension CKRecord {
 
     }
     
+    public var encodedSystemFieldsData: Data {
+        let coder = NSKeyedArchiver(requiringSecureCoding: true)
+        encodeSystemFields(with: coder)
+        coder.finishEncoding()
+        return coder.encodedData
+    }
 }

@@ -15,6 +15,8 @@ struct Book: Identifiable {
     var title: String
     var createdAt: Date
     
+    fileprivate(set) var encodedSystemFields: Data?
+
     init(id: Identifier<Book> = Identifier(UUID().uuidString), title: String) {
         self.identifier = id
         self.title = title
@@ -38,7 +40,8 @@ extension Book: RecordCreating {
     init(record: CKRecord) throws {
         identifier = Identifier(rawValue: record.recordID.recordName)
         title = record.value(forKey: "title") as? String ?? ""
-        createdAt = record.value(forKey: "createdAt") as? Date ?? Date()
+        createdAt = record.value(forKey: "creationDate") as? Date ?? Date()
+        encodedSystemFields = record.encodedSystemFieldsData
     }
-    
+
 }

@@ -16,7 +16,8 @@ struct Page: Identifiable {
     var createdAt: Date
     var modifiedAt: Date
     var text: String
-    
+    fileprivate(set) var encodedSystemFields: Data?
+
     var title: String? {
         return text.components(separatedBy: "\n").first
     }
@@ -51,9 +52,10 @@ extension Page: RecordCreating {
         identifier = Identifier(rawValue: record.recordID.recordName)
         let bookRef = record.value(forKey: "bookId") as? CKRecord.Reference
         bookId = Identifier(rawValue: bookRef?.recordID.recordName ?? "")
-        createdAt = record.value(forKey: "createdAt") as? Date ?? Date()
-        modifiedAt = record.value(forKey: "modifiedAt") as? Date ?? Date()
+        createdAt = record.value(forKey: "creationDate") as? Date ?? Date()
+        modifiedAt = record.value(forKey: "modificationDate") as? Date ?? Date()
         text = record.value(forKey: "text") as? String ?? ""
+        encodedSystemFields = record.encodedSystemFieldsData
     }
 
 }

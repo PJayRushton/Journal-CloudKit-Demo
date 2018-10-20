@@ -52,7 +52,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZKX-WU-7kO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Page Detail" id="v2r-gg-FLI"/>
+                    <navigationItem key="navigationItem" title="Page Detail" id="v2r-gg-FLI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Prn-qf-blD">
+                            <connections>
+                                <action selector="save" destination="Ija-2v-Z3l" id="0f0-4b-nZd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="textView" destination="abF-W1-Nyx" id="YkT-Yx-zkQ"/>
