@@ -7,17 +7,38 @@
 //
 
 import Foundation
+import CloudKit
 
-struct Book: Codable, Hashable, Equatable {
+struct Book: Identifiable {
     
-    var id: Identifier<Book>
+    var identifier: Identifier<Book>
     var title: String
     var createdAt: Date
     
     init(id: Identifier<Book> = Identifier(UUID().uuidString), title: String) {
-        self.id = id
+        self.identifier = id
         self.title = title
         self.createdAt = Date()
+    }
+    
+}
+
+extension Book: RecordCreating {
+    
+    static var recordType: String {
+        return "Book"
+    }
+    
+    var cloudKitRecordProperties: [String : CKRecordValue?] {
+        var properties = [String: CKRecordValue?]()
+        properties["title"] = title as CKRecordValue?
+        return properties
+    }
+    
+    init(record: CKRecord) throws {
+        identifier = Identifier(rawValue: record.recordID.recordName)
+        title = record.value(forKey: "title") as? String ?? ""
+        createdAt = record.value(forKey: "createdAt") as? Date ?? Date()
     }
     
 }

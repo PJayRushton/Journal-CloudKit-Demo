@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1682A41217A8D2E008575FD /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682A40217A8D2E008575FD /* CloudKitManager.swift */; };
+		A1682A43217AC354008575FD /* RecordCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682A42217AC354008575FD /* RecordCreating.swift */; };
 		A1F88D0A21792F0C00878D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0921792F0C00878D9E /* AppDelegate.swift */; };
 		A1F88D0C21792F0C00878D9E /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0B21792F0C00878D9E /* BookListViewController.swift */; };
 		A1F88D0E21792F0C00878D9E /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F88D0D21792F0C00878D9E /* PageDetailViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1682A40217A8D2E008575FD /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		A1682A42217AC354008575FD /* RecordCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCreating.swift; sourceTree = "<group>"; };
 		A1F88D0621792F0C00878D9E /* Journal-CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F88D0921792F0C00878D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F88D0B21792F0C00878D9E /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				A1F88D1421792F0E00878D9E /* LaunchScreen.storyboard */,
 				A1F88D632179411C00878D9E /* Identifier.swift */,
 				A1F88D1721792F0E00878D9E /* Info.plist */,
+				A1682A42217AC354008575FD /* RecordCreating.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				A1F88D5D21793FE700878D9E /* AppState.swift */,
 				A1F88D65217945B200878D9E /* Commands.swift */,
 				A1F88D6721794BFF00878D9E /* AppEvents.swift */,
+				A1682A40217A8D2E008575FD /* CloudKitManager.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1682A43217AC354008575FD /* RecordCreating.swift in Sources */,
 				A1F88D602179401200878D9E /* Reactor.swift in Sources */,
 				A1F88D4A2179342400878D9E /* Book.swift in Sources */,
+				A1682A41217A8D2E008575FD /* CloudKitManager.swift in Sources */,
 				A1F88D0E21792F0C00878D9E /* PageDetailViewController.swift in Sources */,
 				A1F88D66217945B200878D9E /* Commands.swift in Sources */,
 				A1F88D5E21793FE700878D9E /* AppState.swift in Sources */,

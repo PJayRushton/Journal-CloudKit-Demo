@@ -30,6 +30,12 @@ struct AppState: State {
         switch event {
         case let event as ObjectAdded<Book>:
             books.insert(event.object)
+        case let event as ObjectAdded<[Book]>:
+            books.formUnion(event.object)
+        case let event as ObjectAdded<Page>:
+            pages.update(with: event.object)
+        case let event as ObjectAdded<[Page]>:
+            pages.formUnion(event.object)
         case let event as ObjectUpdated<Page>:
             if newPage == event.object {
                 newPage = event.object
@@ -53,7 +59,7 @@ struct AppState: State {
     }
     
     func pages(for book: Book) -> Set<Page> {
-        return pages.filter { $0.bookId == book.id }
+        return pages.filter { $0.bookId == book.identifier }
     }
     
 }

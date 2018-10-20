@@ -21,6 +21,7 @@ class PageListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         core.add(subscriber: self)
+        loadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -45,6 +46,11 @@ extension PageListViewController: Subscriber {
 // MARK: - Private
 
 private extension PageListViewController {
+    
+    func loadData() {
+        guard let book = core.state.selectedBook else { return }
+        core.fire(command: FetchPages(of: book))
+    }
     
     func page(at indexPath: IndexPath) -> Page {
         return pages[indexPath.row]

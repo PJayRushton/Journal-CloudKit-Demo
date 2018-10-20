@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CloudKit
 
 struct Page: Identifiable {
     
@@ -19,6 +20,9 @@ struct Page: Identifiable {
     var title: String? {
         return text.components(separatedBy: "\n").first
     }
+    var bookReference: CKRecord.Reference {
+        return CKRecord.Reference(recordID: CKRecord.ID(recordName: bookId.rawValue), action: CKRecord.Reference.Action.deleteSelf)
+    }
     
     init(id: Identifier<Page> = Identifier(UUID().uuidString), bookId: Identifier<Book>, text: String = "") {
         self.identifier = id
@@ -28,4 +32,28 @@ struct Page: Identifiable {
         self.modifiedAt = Date()
     }
     
+}
+
+extension Page: RecordCreating {
+    
+    static var recordType: String {
+        return "Page"
+    }
+    
+    var cloudKitRecordProperties: [String : CKRecordValue?] {
+        var properties = [String: CKRecordValue?]()
+        properties["bookId"] = bookReference as CKRecord.Reference?
+        properties["text"] = text as CKRecordValue?
+        return properties
+    }
+    
+    init(record: CKRecord) throws {
+        identifier = Identifier(rawValue: record.recordID.recordName)
+        let bookRef = record.value(forKey: "bookId") as? CKRecord.Reference
+        bookId = Identifier(rawValue: bookRef?.recordID.recordName ?? "")
+        createdAt = record.value(forKey: "createdAt") as? Date ?? Date()
+        modifiedAt = record.value(forKey: "modifiedAt") as? Date ?? Date()
+        text = record.value(forKey: "text") as? String ?? ""
+    }
+
 }

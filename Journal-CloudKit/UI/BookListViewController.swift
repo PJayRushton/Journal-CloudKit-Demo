@@ -16,6 +16,7 @@ class BookListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        core.fire(command: FetchBooks())
     }
     
     override func viewWillAppear(_ animated: Bool) {
